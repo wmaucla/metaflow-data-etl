@@ -1,0 +1,22 @@
+version: "3.5"
+
+services:
+  lint_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    command: make lints
+  test_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    command: pytest
+  run_core_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/opt/data/
+    command: python core/main.py run --dataset_name /opt/data/sample.parquet --file_path_loc /opt/

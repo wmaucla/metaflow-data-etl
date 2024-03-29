@@ -1,3 +1,9 @@
+# Data
+data/*.parquet
+data/*.csv
+.metaflow/
+data/*.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
