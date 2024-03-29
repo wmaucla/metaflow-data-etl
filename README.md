@@ -14,7 +14,7 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 
-A usecase designed to simulate some summary statistics from machine data. 
+A usecase designed to simulate some summary statistics from machine data. This is wrapped within docker-compose to simulate CI processes, and leverages metaflow as the execution engine for the DAG.
 
 ## Quickguide
 
@@ -33,5 +33,4 @@ make production.run  # exec metaflow in a container
     * Contains ability to run things locally, as well as helper functions for running in "production" mode
 2. Poetry is used as an environment manager
 3. Metaflow is used as a way to execute tasks
-4. `Notebooks` directory contains some notebooks used for exploring datasets prior to writing code
-5. Main code is split between core and helpers, with helpers split out for ease of testing
+4. Main code is split between core and helpers, with helpers split out for ease of testing
